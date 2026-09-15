@@ -1,0 +1,9 @@
+name = "waypoint-backend"
+
+[build]
+  builder = "docker"
+  dockerfile = "Dockerfile"
+
+[deploy]
+  start_command = "node src/index.js"
+  healthcheck_path = "/health"
