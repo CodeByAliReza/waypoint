@@ -1,9 +1,11 @@
-name = "waypoint-backend"
-
-[build]
-  builder = "docker"
-  dockerfile = "Dockerfile"
-
-[deploy]
-  start_command = "node src/index.js"
-  healthcheck_path = "/health"
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "dockerfile",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "node src/index.js",
+    "healthcheckPath": "/health"
+  }
+}
